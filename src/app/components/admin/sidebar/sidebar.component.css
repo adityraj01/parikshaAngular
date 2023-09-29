@@ -1,0 +1,68 @@
+
+  
+  mat-icon {
+    margin-top: 8px; 
+   }
+
+  .example-header-image1 {
+    background-image: url("/assets/home.jpg");
+    margin-top: 0px;
+    background-size: cover;
+  }
+  .example-header-image2 {
+    background-image: url("/assets/profile.jpg");
+    margin-top: 0px;
+    background-size: cover;
+  }
+  .example-header-image3 {
+    background-image: url("/assets/categories.jpg");
+    padding-top: 0px;
+    background-size: cover;
+  }
+  .example-header-image4 {
+    background-image: url("/assets/add-categories.jpg");
+    padding-top: 0px;
+    background-size: cover;
+  }
+  .example-header-image5 {
+    background-image: url("/assets/quiz.jpg");
+    padding-top: 0px;
+    background-size: cover;
+  }
+  .example-header-image6 {
+    background-image: url("/assets/add-quiz.jpg");
+    background-size: cover;
+  }
+  .example-header-image7 {
+    background-image: url("/assets/create-notes.jpg");
+    background-size: cover;
+  }
+  .example-header-image8 {
+    background-image: url("/assets/add-categories.png");
+    background-size: cover;
+  }
+
+
+  /* Add this CSS to your component's CSS file */
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* padding: 38px; Adjust as needed for spacing */
+  margin-left: 70px;
+  margin-top: 7px;
+}
+
+/* Optionally, you can add more styles to your buttons as needed */
+button.commonClass
+{
+  background-color: transparent; /* Remove the button background color if needed */
+  border: none; /* Remove the button border if needed */
+  cursor: pointer; /* Change cursor style on hover if needed */
+  outline: none; /* Remove the button outline on focus if needed */
+}
+.example-header-image6:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the shadow values as needed */
+}

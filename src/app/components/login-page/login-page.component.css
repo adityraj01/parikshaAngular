@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f5ff; /* Light blue background color for the whole page */
+}
+
+.login-container {
+  width: 300px;
+  padding: 20px;
+  background-color: lightblue; /* Blue background color for the login container */
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  margin-left: 50px;
+}
+
+.welcome-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+  
+}
+
+.form-group input:hover {
+  background-color: white; /* Light grey background color on hover */
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 40px 10px 30px;
+  font-size: 16px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: blue;
+}
+
+.form-group input:hover, .form-group input:focus {
+  border-color: #ccc; /* Light grey border on hover and focus */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0056b3; /* Darker blue background color for the login button */
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004080; /* Darker background color on hover */
+}
+
+.register-link {
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: blue; /* Light grey color on hover */
+}

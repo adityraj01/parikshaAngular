@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+  
+.xyz{
+    overflow: hidden;
+}
+
+.right-top {
+    display: flex;
+    gap: 10px;
+}

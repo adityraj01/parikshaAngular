@@ -1,0 +1,21 @@
+<div class="login-container">
+    <div class="welcome-heading">
+      Welcome
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="form-group" >
+        <i class="fa fa-user icon" style="color: blue;"></i>
+        <input type="text" name="username" formControlName="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <i class="fa fa-lock icon"  style="color: blue;"></i>
+        <input type="password" name="password"  formControlName="password" placeholder="Password" required>
+      </div>
+    
+      <button type="submit">Login</button>
+    </form>
+    
+    <div class="register-link">
+      New User? <a routerLink="/signup">Register here</a>
+    </div>
+  </div>
