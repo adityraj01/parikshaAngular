@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 
@@ -8,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit{
-  constructor(public login : UserService){};
+  constructor(public login : UserService, private router: Router){};
   isLoggedIn = false;
   username = '';
   
@@ -29,6 +30,6 @@ export class NavBarComponent implements OnInit{
     this.login.logout();
     this.isLoggedIn = false;
     this.username = '';
-    window.location.reload();
+    this.router.navigateByUrl('/');
   }
 }

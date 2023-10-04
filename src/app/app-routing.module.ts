@@ -33,7 +33,7 @@ const routes: Routes = [
   {
     path: 'admin', 
     component: DashboardComponent,
-    // canActivate : [adminGuard],
+    canActivate : [adminGuard],
     children :[
       {
         path:'',
@@ -80,12 +80,12 @@ const routes: Routes = [
   {
     path:'start/:qid',
     component:StartQuizComponent,
-    // canActivate : [normalGuard],
+    canActivate : [normalGuard],
   },
   {
     path: 'user-dashboard', 
     component: UserDashboardComponent,
-    // canActivate : [normalGuard],
+    canActivate : [normalGuard],
     children :[
       {
         path:':catId',
