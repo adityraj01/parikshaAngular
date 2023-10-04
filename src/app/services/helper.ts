@@ -1,1 +1,1 @@
-export const baseUrl = 'http://localhost:8080';
+export const baseUrl = 'https://pariksha-production-bf1b.up.railway.app';
