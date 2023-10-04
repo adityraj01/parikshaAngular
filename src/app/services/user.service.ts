@@ -18,6 +18,11 @@ export class UserService {
 
   public addUser(user:any){
     debugger;
+    console.log(user.username);
+    console.log(user.password);
+    localStorage.setItem('newUserName',user.username);
+    localStorage.setItem('newUserPassword',user.password);
+    
     return this.http.post(`${baseUrl}/user/`,user);
   }
 

@@ -10,9 +10,14 @@ import Swal from 'sweetalert2';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
+  newUserName: string = '';
+  newUserPassword: string = '';
+
   constructor(private userService: UserService, private _snack: MatSnackBar, private router: Router) {}
   
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
   public user = {
     username: '',
@@ -58,15 +63,35 @@ export class SignUpComponent implements OnInit {
 
     this.userService.addUser(this.user).subscribe(
       (data) => {
-        console.log(data);
+        debugger;
         Swal.fire('Success done', 'user is registered', 'success');
         this.resetUserData();
-        // window.location.href = '/user-dashboard/0';
-        // localStorage.setItem('isLoggedIn', 'true');
-        // localStorage.setItem('normalRole', 'NORMAL');
+        this.newUserName = localStorage.getItem('newUserName') || '';
+        this.newUserPassword = localStorage.getItem('newUserPassword') || '';
+        this.userService.generateToken({ username: this.newUserName, password: this.newUserPassword }).subscribe(
+          (data: any) => {
+    
+            this.userService.loginUser(data.token);
+            this.userService.getCurrentUser().subscribe(
+              (user:any)=>{
+                this.userService.setUser(user);
+                
+                if(this.userService.getUserRole() == 'NORMAL'){
+                  window.location.href = '/user-dashboard/0';
+                  localStorage.setItem('isLoggedIn','true');
+                  localStorage.setItem('normalRole','NORMAL');
+                }else{
+                  this.userService.logout();
+                }
+              }
+            )
+          },
+          (error) => {
+            this._snack.open("Invalid Details !! Try Again",'',{duration:3000,})
+          }
+        )
       },
       (error) => {
-        console.log("failed");
         this._snack.open("User already present!!", '', { duration: 2000 });
       }
     );
